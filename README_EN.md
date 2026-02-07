@@ -5,7 +5,7 @@
 A social media publishing skill for AI programming assistants, based on [agent-browser](https://github.com/anthropics/agent-browser) to automate content publishing to major social platforms.
 
 
-## Why?
+## 💡 Why?
 
 **claude code + bash + --help + skills**
 
@@ -16,7 +16,7 @@ Self-evolution makes maintenance easy, automatically fixing workflows when pages
 Communicates with Claude Code to understand user needs and dynamically generate publishing content
 
 
-## Features
+## ✨ Features
 
 - 🚀 **One-Line Publishing** - Type `/social-push post this article to Xiaohongshu` in Claude Code, AI handles everything
 - 🧠 **AI-Driven Smart Interaction** - No hardcoded selectors, AI understands page elements, strong resistance to page changes
@@ -28,7 +28,7 @@ Communicates with Claude Code to understand user needs and dynamically generate 
 - 🎯 **Multi-Platform Support** - Supports Xiaohongshu (images/articles), X/Twitter, easily extensible
 
 
-## Supported Platforms
+## 🌐 Supported Platforms
 
 Add a new platform in one sentence
 
@@ -41,7 +41,7 @@ Add a new platform in one sentence
 more and more...
 
 
-## Installation
+## 📦 Installation
 
 Tips: Simply copy the content below to Claude Code for installation
 
@@ -64,15 +64,15 @@ npx skills add jihe520/social-push
 
 Or manually copy the `.claude/skills/social-push` directory to your project.
 
-## Usage
+## 🚀 Usage
 
 Simply use the `/social-push` command manually in Claude Code
 
-## Customization
+## ⚙️ Customization
 
 Modify the `# Rules` section in [SKILL.md](./social-push/SKILL.md) to customize key parameters
 
-## Directory Structure
+## 📁 Directory Structure
 
 ```
 social-push/
@@ -84,7 +84,7 @@ social-push/
     └── more...                  # More platforms to be added
 ```
 
-## First Login
+## 🔑 First Login
 
 Manual initialization login recommended
 Some platforms require manual login once to save state:
@@ -104,7 +104,7 @@ Save state after manual login `agent-browser state save ~/my-state.json`
 ```
 
 
-## References
+## 🔗 References
 
 - [Claude Code](https://docs.anthropic.com/en/docs/claude-code) - Anthropic's AI programming assistant
 - [agent-browser](https://github.com/vercel-labs/agent-browser) - AI-driven browser automation tool
@@ -113,6 +113,6 @@ Save state after manual login `agent-browser state save ~/my-state.json`
 
 
 
-## Contributing
+## 🤝 Contributing
 
 Welcome to add more platform support! Refer to existing workflow formats in the `references/` directory to create workflows for new platforms.

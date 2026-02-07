@@ -5,7 +5,7 @@
 一个用于 AI 编程助手的社交媒体发布技能，基于 [agent-browser](https://github.com/anthropics/agent-browser) 实现自动化发布内容到各大社交平台。
 
 
-## Why?
+## 💡 Why?
 
 **claude code + bash + --help + skills**
 
@@ -16,7 +16,7 @@ self-evolution 方便维护，页面变化后可自行修复
 与 claude code 沟通用户需求，动态生成发布内容
 
 
-## Features
+## ✨ Features
 
 - 🚀 **一句话发布内容** - 在 Claude Code 中输入 `/social-push 把这篇文章发到小红书`，AI 自动完成所有操作
 - 🧠 **AI 驱动的智能交互** - 无需硬编码选择器，AI 自动理解页面元素，抗改版能力强
@@ -28,7 +28,7 @@ self-evolution 方便维护，页面变化后可自行修复
 - 🎯 **多平台支持** - 已支持小红书（图文/长文）、X/Twitter，轻松扩展更多平台
 
 
-## 支持平台
+## 🌐 支持平台
 
 一句话添加一个新平台
 
@@ -41,7 +41,7 @@ self-evolution 方便维护，页面变化后可自行修复
 more and more...
 
 
-## 安装
+## 📦 安装
 
 tips: 直接将下面内容复制给 claude code 执行即可安装
 
@@ -64,15 +64,15 @@ npx skills add jihe520/social-push
 
 或手动复制 `.claude/skills/social-push` 目录到你的项目中。
 
-## 使用方法
+## 🚀 使用方法
 
 在 Claude Code 中 **手动** /social-push 命令 即可
 
-## 自定义
+## ⚙️ 自定义
 
 修改 [SKILL.md](./social-push/SKILL.md) 的 `# Rules` 部分可以自定义关键参数
 
-## 目录结构
+## 📁 目录结构
 
 ```
 social-push/
@@ -84,7 +84,7 @@ social-push/
     └── more...                  # 未来可添加更多平台
 ```
 
-## 首次登录
+## 🔑 首次登录
 
 建议手动完成初始化登录
 部分平台必须要手动登录一次以保存状态：
@@ -104,7 +104,7 @@ social-push/
 ```
 
 
-## 引用
+## 🔗 引用
 
 - [Claude Code](https://docs.anthropic.com/en/docs/claude-code) - Anthropic 的 AI 编程助手
 - [agent-browser](https://github.com/vercel-labs/agent-browser) - AI 驱动的浏览器自动化工具
@@ -113,6 +113,6 @@ social-push/
 
 
 
-## 贡献指南
+## 🤝 贡献指南
 
 欢迎添加更多平台支持！参考 `references/` 目录下的现有 workflow 格式创建新平台的发布流程。
