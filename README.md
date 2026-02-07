@@ -86,6 +86,14 @@ social-push/
 
 ## 🔑 首次登录
 
+关于登录状态和浏览器选择
+有很多方式
+连接自己的浏览器 chrome / edge vs 连接下载的浏览器 playweight chromium testing
+chromium testing: 有的网站不能直接使用 agent-browser 登录，需手动滑
+-- state ~/my-state.json: 使用状态文件保存登录状态，但文章草稿不保存
+-- profile ~/my-profile: 使用浏览器用户数据目录，登录状态和草稿都保存，但可能有兼容性问题
+
+
 建议手动完成初始化登录
 部分平台必须要手动登录一次以保存状态：
 

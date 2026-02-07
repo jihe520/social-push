@@ -2,7 +2,7 @@
 name: social-push
 description: 使用 agent-browser 帮用户将内容发到社交媒体上。当用户需要发布内容、推送文章、上传文章、发帖到社交平台时使用此 skill。
 disable-model-invocation: true
-allowed-tools: Bash(agent-browser:*), Bash(jq:*), Read
+allowed-tools: Bash(agent-browser:*), Bash(jq:*), Bash(osascript:*) ,Read
 ---
 
 用户输入 $ARGUMENTS
@@ -14,15 +14,13 @@ allowed-tools: Bash(agent-browser:*), Bash(jq:*), Read
 1. 必须使用 `--state ~/my-state.json` 参数，确保用户登录状态和历史记录被保留
 2. 必须使用 `--headed` 参数，确保浏览器对用户可见
 3. 最终操作只能是**暂存草稿**，禁止自动点击"发布"按钮，由用户自行确认发布
-
+4. 每步操作后用 `agent-browser snapshot -i` 确认元素 ref，因为页面状态变化可能导致 ref 编号变化
 
 # Core Workflow
-1. 确认发布信息：目标平台、内容类型、内容来源（文件路径/直接输入/ai 创作）、标题、话题标签
+1. 确认发布信息 调用 AskUserQuestion tool：目标平台、内容类型、内容来源（文件路径/直接输入/ai 创作）、标题、话题标签
 2. 简单了解 `agent-browser --help` 可用命令
 3. 读取 references 中对应平台和内容类型的 workflow
 4. 严格按照 workflow 中的步骤逐步执行
-5. 每步操作后用 `agent-browser snapshot -i` 确认页面状态，再执行下一步
-6. 完成后关闭浏览器：`agent-browser close`
 
 
 # Self-evolution
