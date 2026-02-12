@@ -17,7 +17,7 @@ allowed-tools: Bash(agent-browser:*), Bash(jq:*), Bash(osascript:*) ,Read
 4. 每步操作后用 `agent-browser snapshot -i` 确认元素 ref，因为页面状态变化可能导致 ref 编号变化
 
 # Core Workflow
-1. 确认发布信息 调用 AskUserQuestion tool：目标平台、内容类型、内容来源（文件路径/直接输入/ai 创作）、标题、话题标签
+1. 确认发布信息 调用 AskUserQuestion tool：目标平台（还是**添加新平台**）、内容类型、内容来源（文件路径/直接输入/ai 创作）、标题、话题标签
 2. 简单了解 `agent-browser --help` 可用命令
 3. 读取 references 中对应平台和内容类型的 workflow
 4. 严格按照 workflow 中的步骤逐步执行
@@ -35,12 +35,12 @@ allowed-tools: Bash(agent-browser:*), Bash(jq:*), Bash(osascript:*) ,Read
 当用户询问需要新添加一个平台时候，按以下步骤添加：
 1. 参考 references 下已有的 workflow 作为模板
 2. 用 `agent-browser --help` 查看可用命令 和 agent-browser 的 skill
-3. 完整测试新的平台交互路径，确保每步操作正确
-4. 在 references 目录下创建新平台的 workflow 文件，并在下方 References 中添加链接
+3. 只有当启动浏览器，完整一步一步测试新的平台交互路径，确保每步操作正确
+4. 才能在 references 目录下创建新平台的 workflow 文件，并在下方 References 中添加链接
 
 # login
 ## general login
-当遇到未登录的平台，尝试询问用户去文登录，
+当遇到未登录的平台，尝试询问用户去网页登录，
 登录后保存状态，agent-browser state save ~/my-state.json 以便下次使用
 
 ## special login
@@ -60,3 +60,6 @@ agent-browser state save ~/my-state.json
 
 ## X (Twitter)
 - `X推文` ：查看[X推文](./references/X推文.md)发布推文时候需要的 workflow
+
+## 微博 (Weibo)
+- `微博` ：查看[微博](./references/微博.md)发布微博时候需要的 workflow
