@@ -34,9 +34,10 @@ self-evolution 方便维护，页面变化后可自行修复
 
 | 平台 | 内容类型 | 状态 |
 |------|----------|------|
-| 小红书 | 图文 | ✅ |
-| 小红书 | 长文 | ✅ |
-| X (Twitter) | 推文 | ✅ |
+| <img src="https://cdn.simpleicons.org/xiaohongshu/FF2442" alt="小红书" width="20" height="20"/> 小红书 | 图文 | ✅ |
+| <img src="https://cdn.simpleicons.org/xiaohongshu/FF2442" alt="小红书" width="20" height="20"/> 小红书 | 长文 | ✅ |
+| <img src="https://cdn.simpleicons.org/x/000000" alt="X" width="20" height="20"/> X | 推文 | ✅ |
+| <img src="https://cdn.simpleicons.org/zhihu/0084FF" alt="知乎" width="20" height="20"/> 知乎 | 想法 | ✅ |
 
 more and more...
 
