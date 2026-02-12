@@ -28,3 +28,7 @@ logs/
 tmp/
 temp/
 *.tmp
+
+test/*
+.claude
+.agents
