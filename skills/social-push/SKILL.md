@@ -32,14 +32,20 @@ allowed-tools: Bash(agent-browser:*), Bash(jq:*), Bash(osascript:*) ,Read
 3. 验证正确的交互路径后，编辑 references 下对应的 workflow 文件进行修正
 
 ## 添加新的社交平台
+当用户询问需要新添加一个平台时候，按以下步骤添加：
 1. 参考 references 下已有的 workflow 作为模板
-2. 用 `agent-browser --help` 查看可用命令
-3. 在 references 目录下创建新平台的 workflow 文件，并在下方 References 中添加链接
+2. 用 `agent-browser --help` 查看可用命令 和 agent-browser 的 skill
+3. 完整测试新的平台交互路径，确保每步操作正确
+4. 在 references 目录下创建新平台的 workflow 文件，并在下方 References 中添加链接
 
 # login
+## general login
+当遇到未登录的平台，尝试询问用户去文登录，
+登录后保存状态，agent-browser state save ~/my-state.json 以便下次使用
+
+## special login
 有些网站不能直接使用 agent-browser 登录
 ms-playwright  Google Chrome for Testing.app
-
 open "path" --args --remote-debugging-port=9222
 sleep 2 && curl -s http://localhost:9222/json/version
 agent-browser connect "ws://localhost:9222/devtools/browser/xxx
@@ -54,5 +60,3 @@ agent-browser state save ~/my-state.json
 
 ## X (Twitter)
 - `X推文` ：查看[X推文](./references/X推文.md)发布推文时候需要的 workflow
-
-
