@@ -5,6 +5,21 @@
 一个用于 AI 编程助手的社交媒体发布技能，基于 [agent-browser](https://github.com/anthropics/agent-browser) 实现自动化发布内容到各大社交平台。
 
 
+---
+
+> check out my new project
+> 
+> 我正在构建一个社交媒体运营 Agent , 欢迎关注
+> 
+> https://gutchain.fun/
+> 
+> my x will record my update : https://x.com/EqbymCi
+>
+> thanks
+
+---
+
+
 ## 💡 Why?
 
 **claude code + bash + --help + skills**
