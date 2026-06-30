@@ -2,7 +2,7 @@
 
 [中文](./README.md) | English
 
-A social media publishing skill for AI programming assistants, based on [agent-browser](https://github.com/anthropics/agent-browser) to automate content publishing to major social platforms.
+A social media publishing skill for AI programming assistants, based on [agent-browser](https://github.com/vercel-labs/agent-browser) to automate content publishing to major social platforms.
 
 
 ## 💡 Why?
@@ -70,7 +70,11 @@ Simply use the `/social-push` command manually in Claude Code
 
 ## ⚙️ Customization
 
-Modify the `# Rules` section in [SKILL.md](./social-push/SKILL.md) to customize key parameters
+Modify the `# Rules` section in [SKILL.md](./skills/social-push/SKILL.md) to customize key parameters
+
+## 🔎 X/Twitter Source Context
+
+If you already reviewed X/Twitter search results, posts, replies, or public metrics with TweetClaw or OpenClaw, pass the JSON, JSONL, CSV, or copied source list to `/social-push`. The skill treats it as read-only context for tone, hashtags, examples, and audience language. It still will not publish, reply, like, repost, follow, or DM automatically.
 
 ## 📁 Directory Structure
 
