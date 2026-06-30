@@ -15,12 +15,14 @@ allowed-tools: Bash(agent-browser:*), Bash(jq:*), Bash(osascript:*) ,Read
 2. 使用 `agent-browser --auto-connect` 自动连接用户的浏览器
 3. 最终操作只能是**暂存草稿**，禁止自动点击"发布"按钮，由用户自行确认发布
 4. 每步操作后用 `agent-browser snapshot -i` 确认元素 ref，因为页面状态变化可能导致 ref 编号变化
+5. 如果用户提供 TweetClaw / OpenClaw 导出的 X/Twitter 来源包，只能把它当作只读参考，用于改写语气、提取话题、保留来源，不代表允许自动互动或发布
 
 # Core Workflow
 1. 确认发布信息 调用 AskUserQuestion tool：目标平台（还是**添加新平台**）、内容类型、内容来源（文件路径/直接输入/ai 创作）、标题、话题标签
 2. 简单了解 `agent-browser --help` 可用命令
-3. 读取 references 中对应平台和内容类型的 workflow
-4. 严格按照 workflow 中的步骤逐步执行
+3. 如果内容来源包含 TweetClaw / OpenClaw X/Twitter 导出，先整理为来源备注：作者、原文 URL、发布时间、公开互动数据、可引用观点；不要请求 X 账号凭据
+4. 读取 references 中对应平台和内容类型的 workflow
+5. 严格按照 workflow 中的步骤逐步执行
 
 
 # Self-evolution

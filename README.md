@@ -2,7 +2,7 @@
 
 中文 | [English](./README_EN.md)
 
-一个用于 AI 编程助手的社交媒体发布技能，基于 [agent-browser](https://github.com/anthropics/agent-browser) 实现自动化发布内容到各大社交平台。
+一个用于 AI 编程助手的社交媒体发布技能，基于 [agent-browser](https://github.com/vercel-labs/agent-browser) 实现自动化发布内容到各大社交平台。
 
 
 ---
@@ -91,7 +91,11 @@ npx skills add jihe520/social-push
 
 ## ⚙️ 自定义
 
-修改 [SKILL.md](./social-push/SKILL.md) 的 `# Rules` 部分可以自定义关键参数
+修改 [SKILL.md](./skills/social-push/SKILL.md) 的 `# Rules` 部分可以自定义关键参数
+
+## 🔎 X/Twitter 来源参考
+
+如果你已经用 TweetClaw 或 OpenClaw 审核过 X/Twitter 搜索结果、帖子、回复或公开指标，可以把 JSON、JSONL、CSV 或复制的来源列表交给 `/social-push`。Skill 会把这些内容作为只读参考，用于优化语气、话题标签和示例；不会因此自动发布、回复、点赞、转发、关注或私信。
 
 ## 📁 目录结构
 
